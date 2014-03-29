@@ -21,7 +21,7 @@ var app = {
     },
     initialize: function() {
         var self = this;
-        this.store = new MemoryStore(function () {
+        this.store = new WebSqlStore(function () {
             self.showAlert('Store Initialized', 'Info');
         });
         $('.search-key').on('keyup', $.proxy(this.findByName, this));

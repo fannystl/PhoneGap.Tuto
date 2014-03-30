@@ -13,7 +13,7 @@
     <script src="js/main.js"></script>-->
     <script type="text/javascript">
         $.getJSON("http://www.outpan.com/api/get_product.php?barcode=078915030900").then(function (data) {
-            alert(data);
+            alert(data.name);
         }, function (error) {
             alert(error.statusText);
         });
